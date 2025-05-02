@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<templates id="template" xml:space="preserve">
+    <t t-name="clear_pos_order_line.RemoveProduct" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension">
+        <xpath expr="//li" position="inside">
+             <button class="clear-product control-button btn btn-light"
+                     style="margin-left:10px;"
+                     t-on-click="() => this.onclickRemoveProduct()">
+                 <span>X</span>
+        </button>
+        </xpath>
+    </t>
+</templates>
