@@ -7,7 +7,6 @@ patch(ControlButtons.prototype, {
     onclickRemove() {
         const order = this.pos.get_order();
         const lines = order.get_orderlines();
-
         if (lines.length) {
             lines.filter(line => line.get_product()).forEach(line => order.removeOrderline(line));
             this.notification.add(_t("Items removed successfully."), 3000);

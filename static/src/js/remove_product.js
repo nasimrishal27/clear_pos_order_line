@@ -2,7 +2,6 @@
 import { Orderline } from "@point_of_sale/app/generic_components/orderline/orderline";
 import { patch } from "@web/core/utils/patch";
 import { usePos } from "@point_of_sale/app/store/pos_hook";
-import { _t } from "@web/core/l10n/translation";
 
 patch(Orderline.prototype, {
     setup() {
