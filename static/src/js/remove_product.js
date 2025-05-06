@@ -9,8 +9,10 @@ patch(Orderline.prototype, {
     },
     onclickRemoveProduct() {
         const order = this.pos.get_order();
-        const line_hsn = this.props.line?.l10n_in_hsn_code;
-        const realLine = order.get_orderlines().find(l => l.l10n_in_hsn_code === line_hsn);
+        const product = this.props.line?.productName;
+        console.log(this.props.line)
+        const realLine = order.get_orderlines().find(l => l.full_product_name === product);
+        console.log(realLine)
         if (realLine) {
             setTimeout(() => {
                 order.removeOrderline(realLine);
